@@ -1,0 +1,1 @@
+cd Module/WAFNinja/ && python wafninja.py "$@"

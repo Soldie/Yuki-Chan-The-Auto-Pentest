@@ -1,0 +1,1 @@
+cd Module/joomscan/ && perl joomscan.pl "$@"
